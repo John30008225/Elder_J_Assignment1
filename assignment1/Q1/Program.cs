@@ -4,7 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Q1___Assignment1
+/* Title:   Q1 - Car (Assignment 1A)
+Author:     John Elder
+Date:       17/08/2018
+Purpose:    The program should create a new car object, obtain the colour, make and gearbox from the user, which are then assigned to the object’s fields by way of the Set methods.  The program should then display the car information as shown in the sample below, by calling the appropriate methods.
+*/
+
+    namespace Q1___Assignment1
 {
     class Program
     {
