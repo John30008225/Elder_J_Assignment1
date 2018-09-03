@@ -48,7 +48,7 @@ Purpose:    The program should create a new car object, obtain the colour, make 
             private string gearBox;
             
 
-            public string getColour()
+            public string getColour()               // Get and set methods 
             {
                 return colour;
             }

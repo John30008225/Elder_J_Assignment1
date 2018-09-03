@@ -21,7 +21,7 @@ namespace Q5
 
             do
             {      
-                Person person1 = new Person("",""); 
+                Person person1 = new Student (""); 
                 person1 = GetDeets(person1);
                 persons.Add(person1);
 
@@ -45,9 +45,10 @@ namespace Q5
             Console.WriteLine("Last name: ");                                    
             p1.LastName = Console.ReadLine();
 
-            Console.WriteLine("\n Enter year of birth: ");             
+            Console.WriteLine("\nEnter year of birth: ");             
             p1.YearOfBirth = int.Parse (Console.ReadLine());
             return p1;
+                                                          
         }
     }   
     
@@ -57,23 +58,29 @@ namespace Q5
         public string FirstName { get; set; }                   //The auto-implemented properties
         public string LastName { get; set; }
         public int YearOfBirth { get; set; }
+        
 
-        public Person(string _fname, string _lname)             //Constructor creating new person record
+        public Person(string _fname, string _lname)               //Constructor creating new person record
         {
+
+
             FirstName = _fname;
+
+
             LastName = _lname;
+
         } 
                
-        public string GetFullName()                             //Method to return full name
+        public string GetFullName()                              //Method to return full name
         {
             return FirstName + LastName;                    
         }
                        
-        public int GetAge()                               //Method to return full name
+        public int GetAge()                                      //Method to return age
         {
             return 2018 - YearOfBirth;                      
-        }
-
+        }        
+                        
     }
 } 
   

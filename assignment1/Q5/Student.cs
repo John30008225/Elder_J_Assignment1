@@ -1,25 +1,39 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Person
+namespace Q5
 {
-	
-        class Student : Person
-    {
+    class Student : Person                                  //Student class inherited from Person
+    { 
+    
         public string Campus { get; set; }
         public int StudentID { get; set; }
 
-        public Student(string _firstName, string _lastName, string _campus)
+
+
+        public Student(string _camp) : base("","")          //constructor creating new student 
         {
-            FirstName = _firstName;
-            LastName = _lastName;
+            Campus = _camp;
         }
 
-        public int EnrollStudent()                             //Method to return full name
+
+        public int EnrollStudent()
         {
-            return _firstName + _lastName + " of " + _campus + " campus has a Student ID of " + StudentID; 
+            Random randm = new Random();
+            int rand_num = randm.Next(1000, 9999);          //Random StudentID number Generator
+            return rand_num;
+
         }
 
-        
+        public string GetInfo()
+        {
+                        
+            return FirstName + " " + LastName + " " + " of " + Campus + " Campus " + " has a student ID of " + EnrollStudent();  //Returning user input data
+                      
+        }
+
     }
 }
-

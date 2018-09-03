@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 /* Title:   Q3 - Car (Assignment 1A)
 Author:     John Elder
 Date:       17/08/2018
-Purpose:    Developing a program that will help the Real Estate Agent Quicksell manage their house sales.
+Purpose:    New console application which also includes a Car class that matches the updated UML class diagram created in question 2.
 */
 
 namespace Q3

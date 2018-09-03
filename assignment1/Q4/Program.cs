@@ -20,7 +20,7 @@ namespace Q4
             string input = "";
 
                 
-            do
+            do                                                     //Loop to create a new person/s
             {      
                 Person person1 = new Person("",""); 
                 person1 = GetDeets(person1);
@@ -31,9 +31,9 @@ namespace Q4
             }while (input == "y");    
 
             foreach(Person x in persons)
-                Console.WriteLine($"Person: " + x.FirstName + "" + x.LastName + " is " + x.GetAge()); 
+                Console.WriteLine($"Person: " + x.FirstName + " " + x.LastName + " is " + x.GetAge()); 
 
-            Console.WriteLine("\n\nThank You and Have a great day");
+            Console.WriteLine("\n\nThank you and have a great day");
             Console.ReadLine();
         }
 
@@ -55,22 +55,22 @@ namespace Q4
     class Person
     {
      
-        public string FirstName { get; set; }                   //The auto-implemented properties
+        public string FirstName { get; set; }                 //The auto-implemented properties
         public string LastName { get; set; }
         public int YearOfBirth { get; set; }
 
-        public Person(string _fname, string _lname)             //Constructor creating new person record
+        public Person(string _fname, string _lname)           //Constructor creating new person record
         {
             FirstName = _fname;
             LastName = _lname;
         } 
                
-        public string GetFullName()                             //Method to return full name
+        public string GetFullName()                          //Method to return user fullname      
         {
             return FirstName + LastName;                    
         }
                        
-        public int GetAge()                               //Method to return full name
+        public int GetAge()                               
         {
             return 2018 - YearOfBirth;                      
         }
