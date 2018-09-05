@@ -15,54 +15,64 @@ namespace Q5
     {
         static void Main(string[] args)
         {
+
             
-            List<Person> persons = new List<Person>();              //List holding strings
+            List<Student> students = new List<Student>();              //List holding strings
             string input = "";
 
+            
             do
             {      
-                Person person1 = new Student (""); 
-                person1 = GetDeets(person1);
-                persons.Add(person1);
+                Student student1 = new Student ("","","");            //Loop to create new Student/s
+                student1 = GetDeets(student1);
+                students.Add(student1);
+                
 
-                Console.Write("\n Do you want to add another person? (y/n)");
+                Console.Write("\n\nDo you want to add another person? (y/n)");
                 input = Console.ReadLine();
             }while (input == "y");    
 
-            foreach(Person x in persons)
-                Console.WriteLine($"Person:" + x.FirstName + x.LastName + "is" + x.GetAge()); 
-
-            Console.WriteLine("Thank You and Have a great day");
-            Console.ReadLine();
+            foreach(Student x in students)                           //For each of the new students display user input of First Name, Last Name, Campus and StudentID in the console
+                Console.Write("\n" + x.FirstName + " " + x.LastName + " of " + x.Campus + " has a student ID of " + x.StdId);
+                Console.ReadLine();
         }
 
+        
 
-        public static Person GetDeets (Person p1)
+        public static Student GetDeets(Student p1)                  //Asking for user to enter input data
         {
-            Console.WriteLine("Enter name of new person below \n \nFirst name: ");  
+
+            Console.Write("Enter name of new student below\n\nEnter First name: ");
             p1.FirstName = Console.ReadLine();
-                    
-            Console.WriteLine("Last name: ");                                    
+
+            Console.Write("Enter Last name: ");
             p1.LastName = Console.ReadLine();
 
-            Console.WriteLine("\nEnter year of birth: ");             
-            p1.YearOfBirth = int.Parse (Console.ReadLine());
+            Console.Write("Enter Campus: ");
+            p1.Campus = Console.ReadLine();
+
+            Console.Write("\nCreating new person record ... ");
+            Console.ReadLine();
+
+            Console.Write("\nAdding new student record to "+ p1.Campus +" campus ...");
+            Console.ReadLine();
+
             return p1;
-                                                          
+
+           
         }
     }   
     
     class Person
     {
      
-        public string FirstName { get; set; }                   //The auto-implemented properties
+        public string FirstName { get; set; }                      //The auto-implemented properties
         public string LastName { get; set; }
         public int YearOfBirth { get; set; }
         
 
         public Person(string _fname, string _lname)               //Constructor creating new person record
         {
-
 
             FirstName = _fname;
 
@@ -71,7 +81,7 @@ namespace Q5
 
         } 
                
-        public string GetFullName()                              //Method to return full name
+        public string GetFullName()                               //Method to return full name
         {
             return FirstName + LastName;                    
         }

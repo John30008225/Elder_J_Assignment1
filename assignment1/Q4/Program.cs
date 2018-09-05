@@ -30,23 +30,26 @@ namespace Q4
                 input = Console.ReadLine();
             }while (input == "y");    
 
-            foreach(Person x in persons)
-                Console.WriteLine($"Person: " + x.FirstName + " " + x.LastName + " is " + x.GetAge()); 
+            foreach(Person x in persons)                             //For each of the new students display user input of First Name, Last Name and Age in the console
+                Console.WriteLine($"\nPerson: " + x.FirstName + " " + x.LastName + " is " + x.GetAge()); 
 
-            Console.WriteLine("\n\nThank you and have a great day");
+            Console.WriteLine("\nThank you and have a great day");
             Console.ReadLine();
         }
 
 
-        public static Person GetDeets (Person p1)
+        public static Person GetDeets (Person p1)                   //Asking for user to enter first name, last name and date of birth
         {
-            Console.WriteLine("Enter name of new person below \n \nFirst name: ");  
+            Console.Write("Enter name of new person below \n \nFirst name: ");  
             p1.FirstName = Console.ReadLine();
                     
-            Console.WriteLine("\nLast name: ");                                    
+            Console.Write("Last name: ");                                    
             p1.LastName = Console.ReadLine();
 
-            Console.WriteLine("\nEnter year of birth: ");             
+            Console.Write("\nCreating new person record ... ");
+            Console.ReadLine();
+
+            Console.Write("\nEnter year of birth: ");             
             p1.YearOfBirth = int.Parse (Console.ReadLine());
             return p1;
         }

@@ -34,7 +34,7 @@ Purpose:    The program should create a new car object, obtain the colour, make 
                 Console.WriteLine($"This car is a {car1.getColour()} {car1.getMake()} with a {car1.getGearBox()} transmission"); // Displaying the user's input that was entered and into a sentence.
                 Console.WriteLine();
 
-                Console.WriteLine("Thank You and Have a great day");
+                Console.WriteLine("Thank you and Have a great day");
                 Console.ReadLine();
             
         }
